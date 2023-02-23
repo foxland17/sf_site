@@ -1,8 +1,14 @@
 111beta version
 
+<<<<<<< HEAD
 Hello!
 This file for testing at SF course
 #
 #
 #
 end of file.
+=======
+this line edited from rahmatjon.umarov.
+this line too.
+and this line edit Rahmatjon Umarov.
+>>>>>>> 97730d70bb9af73a40749df78b70068536371846
