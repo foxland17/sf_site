@@ -1,1 +1,8 @@
 111beta version
+
+Hello!
+This file for testing at SF course
+#
+#
+#
+end of file.
