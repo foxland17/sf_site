@@ -1,0 +1,40 @@
+cat postfix_install.yml
+---
+- name: Manage POSTFIX
+  gather_facts: No
+  hosts: inventory
+
+  tasks:
+    - name: Install Postfix
+      package:
+        name: postfix
+        state: latest
+      become: yes
+      tags:
+        - init postfix
+
+    - name: Start Postfix service
+      service:
+        name: postfix
+        state: started
+        enabled: yes
+      become: yes
+      tags:
+        - init postfix
+
+    - name: Stop Postfix service
+      service:
+        name: postfix
+        state: stopped
+        enabled: yes
+      become: yes
+      tags:
+        - drop postfix
+
+    - name: Drop Postfix
+      package:
+        name: postfix
+        state: absent
+      become: yes
+      tags:
+        - drop postfix
